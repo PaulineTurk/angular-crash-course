@@ -1,12 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Header } from './component/header/header';
+import { Home } from './home/home';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Header, Home],
   template: `
-    <h1>Hello, {{ title() }}</h1>
-    <p>test</p>
+    <app-header/>
+    <app-home/>
 
     <router-outlet />
   `,
@@ -17,5 +19,5 @@ import { RouterOutlet } from '@angular/router';
     `],
 })
 export class App {
-  protected readonly title = signal('angular-boot-camp');
+
 }
