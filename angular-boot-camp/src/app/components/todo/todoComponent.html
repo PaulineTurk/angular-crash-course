@@ -1,0 +1,10 @@
+<ul class="todo-container">
+    @for (todoItem of todoItems(); track todoItem.id) {
+    <li class="todo-item">
+        <input [id]="todoItem.id" type="checkbox" [checked]="todoItem.completed">
+        <label [for]="todoItem.id">
+            {{todoItem.title}}
+        </label>
+    </li>
+    }
+</ul>

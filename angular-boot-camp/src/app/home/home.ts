@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { Greeting } from '../components/greeting/greeting';
 import { CounterComponent } from '../components/counter/counter';
+import { TodoComponent } from '../components/todo/todoComponent';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [Greeting, CounterComponent],
+  imports: [Greeting, CounterComponent, TodoComponent],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

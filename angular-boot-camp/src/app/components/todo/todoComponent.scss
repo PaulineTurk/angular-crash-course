@@ -1,0 +1,12 @@
+.todo-container {
+    margin-top: 15px;
+    margin-left: 15px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item {
+    display: flex;
+    gap: 15px;
+}

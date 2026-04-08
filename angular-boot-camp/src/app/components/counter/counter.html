@@ -1,11 +1,1 @@
 <button (click)="handlerCounterClick()">Counter {{counter()}}</button>
-<ul class="todo-container">
-    @for (todo of todoes(); track todo.id) {
-    <li class="todo-item">
-        <input [id]="todo.id" type="checkbox" [checked]="todo.completed">
-        <label [for]="todo.id">
-            {{todo.title}}
-        </label>
-    </li>
-    }
-</ul>
