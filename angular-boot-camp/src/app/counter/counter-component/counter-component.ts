@@ -1,6 +1,7 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { TodoService } from '../../services/todo-service';
 import { Todo } from '../../services/todo.type';
+import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-counter-component',
@@ -14,7 +15,19 @@ export class CounterComponent implements OnInit {
   todoes = signal<Array<Todo>>([])
 
   ngOnInit(): void {
-    this.todoes.set(this.todoService.todos)
+    this.todoService.getTodosFromApi()
+      .pipe(
+        catchError((err) => {
+          console.log(err)
+          throw err
+        }
+        ))
+      .subscribe(
+        (todos) => {
+          this.todoes.set(todos)
+        }
+      )
+
   }
 
   handlerCounterClick() {
