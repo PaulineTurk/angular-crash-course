@@ -1,2 +1,2 @@
 <app-greeting [message]="homeMessage()"></app-greeting>
-<input type="text" (click)="clickHandler()" />
+<input type="text" (click)="clickHandler()" (keyup)="keyUpHandler($event)" />

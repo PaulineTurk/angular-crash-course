@@ -14,4 +14,10 @@ export class Home {
   clickHandler() {
     console.log("You have clicked on me!")
   }
+
+  keyUpHandler(event: KeyboardEvent) {
+    if (event.key == "a") {
+      console.log(event.key)
+    }
+  }
 }
