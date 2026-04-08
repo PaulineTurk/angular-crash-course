@@ -1,4 +1,7 @@
 <ul class="todo-container">
+    @if (todoItems().length ===0) {
+    <div>Loading ...</div>
+    }
     @for (todoItem of todoItems(); track todoItem.id) {
     <li class="todo-item">
         <input [id]="todoItem.id" type="checkbox" [checked]="todoItem.completed">
