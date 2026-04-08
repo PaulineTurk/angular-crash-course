@@ -6,10 +6,15 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `
     <h1>Hello, {{ title() }}</h1>
+    <p>test</p>
 
     <router-outlet />
   `,
-  styles: [],
+  styles: [`
+        p {
+      background-color: red
+    }
+    `],
 })
 export class App {
   protected readonly title = signal('angular-boot-camp');
