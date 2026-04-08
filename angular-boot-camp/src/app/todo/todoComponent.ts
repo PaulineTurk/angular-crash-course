@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
-import { TodoService } from '../../services/todo-service';
 import { catchError } from 'rxjs';
-import { Todo } from '../../models/todo.type';
+import { TodoService } from '../services/todo-service';
+import { Todo } from '../models/todo.type';
 
 @Component({
   selector: 'app-todo',
