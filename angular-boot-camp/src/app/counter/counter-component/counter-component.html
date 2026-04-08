@@ -1,1 +1,4 @@
 <button (click)="handlerCounterClick()">Counter {{counter()}}</button>
+@for (todo of todoes(); track $index) {
+<div>{{todo.name}}</div>
+}
