@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-greeting',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './greeting.html',
   styleUrl: './greeting.scss',
 })
-export class Greeting {}
+export class Greeting {
+  message = input("Default message")
+}
