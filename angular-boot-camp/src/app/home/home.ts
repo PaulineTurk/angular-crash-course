@@ -10,4 +10,8 @@ import { Greeting } from '../components/greeting/greeting';
 })
 export class Home {
   homeMessage = signal("Hellooooo")
+
+  clickHandler() {
+    console.log("You have clicked on me!")
+  }
 }
