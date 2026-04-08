@@ -1,13 +1,13 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { TodoService } from '../../services/todo-service';
-import { Todo } from '../../services/todo.type';
+import { Todo } from '../../models/todo.type';
 import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-counter-component',
   imports: [],
-  templateUrl: './counter-component.html',
-  styleUrl: './counter-component.scss',
+  templateUrl: './counter.html',
+  styleUrl: './counter.scss',
 })
 export class CounterComponent implements OnInit {
   todoService = inject(TodoService)
